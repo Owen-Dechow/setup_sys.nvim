@@ -58,3 +58,5 @@ vim.api.nvim_create_user_command("PullRemoteConfig", function()
         vim.notify("Ran `git pull --rebase`. " .. out.stdout)
     end)
 end, {})
+
+return { setup = check_git_status }
